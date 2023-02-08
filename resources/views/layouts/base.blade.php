@@ -8,8 +8,10 @@
     <meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
     <meta name="author" content="Bootlab">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/dbkl.png">
-    <title>COB - DBKL</title>
+    <title>COBKL - DBKL</title>
     <link href="/assets/fonts/eina/Eina03-Bold.ttf" rel="stylesheet">
 
     <!-- PICK ONE OF THE STYLES BELOW -->
@@ -152,6 +154,11 @@
                                     @endif
                                 </li>
                                 <li class="nav-item mr-auto">
+                                    <a class="btn active1 text-white mx-3" href="/perkhidmatan-kami">LOG
+                                        MASUK</a>
+                             
+                                </li>
+                                <li class="nav-item mr-auto">
                                     @if (Route::has('login'))
                                         @auth
                                             <a class="btn active1 text-white mx-3" href="/perkhidmatan-kami"><i
@@ -176,12 +183,14 @@
                                                                     <h5 class="modal-title">LOG MASUK</h5>
                                                                 </div>
                                                                 <div class="col text-end">
+                                                                     <a href="/login" class="btn btn-primary w-100">LOG
+                                                                        MASUK</a>
                                                                     <button type="button" class="btn-close"
                                                                         data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
                                                             </div>
 
-                                                            <form action="">
+                                                            <form action="/login">
                                                                 <div class="mb-3">
                                                                     <label class="form-label">E-mel</label>
                                                                     <input type="email" class="form-control"
@@ -201,8 +210,10 @@
                                                                 </div>
 
                                                                 <div class="mb-0">
-                                                                    <a href="/login" class="btn btn-primary w-100">LOG
-                                                                        MASUK</a>
+                                                                    <button type="submit" class="btn btn-primary w-100">LOG
+                                                                        MASUK</button>
+                                                                    {{-- <a href="/login" class="btn btn-primary w-100">LOG
+                                                                        MASUK</a> --}}
                                                                 </div>
                                                             </form>
 
@@ -226,6 +237,15 @@
                                         @endauth
                                     @endif
 
+                                </li>
+                                <li class="nav-item mr-auto">
+                                    {{-- <a class="btn-btn-primary active1 text-black mx-3" href="/logout"><i
+                                        class="far fa-user-circle fa-lg"></i>&nbsp;&nbsp;keluar</a> --}}
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                    
+                                       <button type="submit" class="btn btn-primary">keluar</button>
+                                    </form>
                                 </li>
                             </ul>
                         @else
@@ -273,6 +293,11 @@
                                         <a class="btn btn1 mx-3" href="/perkhidmatan-kami">PERKHIDMATAN KAMI</a>
                                     @endif
                                 </li>
+                                {{-- <li class="nav-item mr-auto">
+                                    <a class="btn active1 text-white mx-3" href="/login">LOG
+                                        MASUK</a>
+                             
+                                </li> --}}
                                 <li class="nav-item mr-auto">
                                     @if (Route::has('login'))
                                         @auth
@@ -287,11 +312,7 @@
                                                 aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
-                                                        {{-- <div class="modal-header">
-                                            <h5 class="modal-title">LOG MASUK</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div> --}}
+                                        
                                                         <div class="modal-body m-5">
                                                             <div class="row">
                                                                 <div class="col">
@@ -304,7 +325,7 @@
                                                             </div>
 
                                                             <form action="">
-                                                                <div class="mb-3">
+                                                                {{-- <div class="mb-3">
                                                                     <label class="form-label">E-mel</label>
                                                                     <input type="email" class="form-control"
                                                                         placeholder="user@gmail.com">
@@ -320,7 +341,7 @@
                                                                     <a href="/forgot-password" target="_blank"
                                                                         class="text-primary">Lupa
                                                                         Kata Laluan?</a>
-                                                                </div>
+                                                                </div> --}}
 
                                                                 <div class="mb-0">
                                                                     <a href="/login" class="btn btn-primary w-100">LOG
@@ -349,6 +370,7 @@
                                     @endif
 
                                 </li>
+                                
                             </ul>
                         @endauth
                     </div>
@@ -1203,6 +1225,7 @@
         </div> --}}
     {{-- </div> --}}
     <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
     <script>
