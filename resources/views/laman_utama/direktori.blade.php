@@ -14,6 +14,8 @@
         {{-- <hr> --}}
     </div>
 
+    
+
     <div class="col">
         <div class="card" style="width: 50rem; align-self: center; margin:auto;background-color:rgb(223, 223, 223)">
             <div class="card-body">
