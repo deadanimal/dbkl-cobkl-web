@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PengurusanPengguna;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,5 +41,12 @@ Route::get('/perkhidmatan-kami', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/pendaftaran', function () {
+    return view('daftar.pendaftaran');
+})->middleware(['auth'])->name('pendaftaran');
+
+// Route::get('pengguna', [PengurusanPengguna::class, '']);
+Route::post('pengguna', [PengurusanPengguna::class, 'ciptaPengguna']);
 
 require __DIR__.'/auth.php';

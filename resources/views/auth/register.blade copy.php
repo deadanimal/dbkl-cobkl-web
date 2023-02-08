@@ -24,7 +24,7 @@
 									<div class="text-center">
 										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
 									</div>
-									<form method="POST" action="/pengguna">
+									<form method="POST" action="/register">
                                         @csrf
                                     
                                         <div class="card">
@@ -65,7 +65,7 @@
                                     
                                                 <div class="mb-3">
                                                     <label>Nama</label>
-                                                    <input class="form-control form-control-lg" type="text" name="nama" />
+                                                    <input class="form-control form-control-lg" type="text" name="name" />
                                                 </div>
                                     
                                                 <div class="mb-3">
@@ -121,7 +121,7 @@
 
                                                 {{-- <div class="mb-3">
                                                     <label>Sahkan Katalaluan</label>
-                                                    <input class="form-control form-control-lg" type="password" name="sah_katalaluan" />
+                                                    <input class="form-control form-control-lg" type="password" name="password_confirmation" />
                                                 </div> --}}
                                             </div>
                                         </div>
