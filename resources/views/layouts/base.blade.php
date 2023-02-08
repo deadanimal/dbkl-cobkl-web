@@ -18,6 +18,7 @@
     {{-- <link href="/assets/css/dark.css" rel="stylesheet"> --}}
     <link href="/assets/css/light.css" rel="stylesheet">
 
+
     <!-- BEGIN SETTINGS -->
     <!-- You can remove this after picking a style -->
     <style>
@@ -31,6 +32,29 @@
             font-weight: normal;
             font-style: normal;
             padding: 0rem
+        }
+
+        .form-control {
+            border-color: #4b3cbf;
+            box-shadow: inset 2px 2px 5px 2px lightgrey;
+        }
+
+        .text-primary {
+            color: #433395 !important;
+        }
+
+        .bg-primary {
+            background-color: #4f3eca !important;
+            color: white;
+        }
+
+        .bg-orange-cobkl {
+            background-color: #3f1f9e;
+        }
+
+        .btn-orange-cobkl {
+            color: white;
+            background-color: #4c06c5;
         }
 
         .active1 {
@@ -1179,6 +1203,7 @@
         </div> --}}
     {{-- </div> --}}
     <script src="/assets/js/app.js"></script>
+
 
     <script>
         $(function() {

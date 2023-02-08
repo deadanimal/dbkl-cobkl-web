@@ -28,9 +28,12 @@
         </div>
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-3">
             Program
+        </div>
+        <div class="col-4">
+            <img src="/img/group_12.jpg" class="center" style="" alt="testing">
         </div>
         <div class="col-9">
             <div class="card" style="background-color: #312C82; border-radius: 0">
@@ -44,13 +47,13 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="col mt-2 mb-2 text-center">
+        <img src="/img/group_12.jpg" alt="">
     </div>
 
-    <div class="row">
-        <div class="col-3">
-            Pengumuman
-        </div>
-        <div class="col-9">
+    <div class="card" style="background-color: #312C82">
+        <div class="col" style="margin-left: 3em;margin-right:3em;margin-top:3em;margin-bottom:3em">
             <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000">
@@ -104,6 +107,76 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+        </div>
+    </div>
+    <div class="col mt-2 mb-2 text-center">
+        <img src="/img/Group_17.png" alt="">
+    </div>
+    <div class="col" style="margin-left: 3em;margin-right:3em;margin-top:3em;margin-bottom:3em">
+        <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <h2 class="text-center">testing</h2>
+                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                            </div>
+                            {{-- <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <h2 class="text-center">testing</h2>
+                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                            </div>
+                            {{-- <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <h2 class="text-center">testing</h2>
+                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                            </div>
+                            {{-- <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                        <div class="col-4">
+                            <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 @endsection
