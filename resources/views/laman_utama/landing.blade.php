@@ -119,22 +119,22 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="card">
-                                <h2 class="text-center">testing</h2>
-                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                                <h2 class="text-center">Part 1</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius debitis maxime consequuntur ab, sit corporis veniam molestias molestiae fugiat aliquid accusamus ipsa, iusto itaque, eligendi quos voluptatum. Voluptatem, provident delectus.</p>
                             </div>
                             {{-- <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <h2 class="text-center">testing</h2>
-                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                                <h2 class="text-center">Part 2</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed tenetur ratione, delectus vitae doloribus soluta similique eum consectetur quisquam perspiciatis corporis dolor, nostrum illum voluptatem, voluptate odio ipsa repellendus!</p>
                             </div>
                             {{-- <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <h2 class="text-center">testing</h2>
-                                <p>idagfognsgkadggjsdgbdsogsdhg <br> sdafgshs <br> safgfsgsadgs</p>
+                                <h2 class="text-center">Part 3</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, ipsum. Recusandae illo unde explicabo dolorum sint praesentium deserunt sapiente, inventore, ea quos dolor veniam nemo eos temporibus est facilis eveniet.</p>
                             </div>
                             {{-- <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
