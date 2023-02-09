@@ -164,7 +164,7 @@
                                         {{-- <a href="{{ route('login') }}" class="btn btn-secondary">Sudah Daftar?</a> --}}
                                         <div class="text-center">
 
-                                            <button type="submit" class="btn btn-primary">Daftar</button>
+                                            <button type="submit" class="btn btn-primary">Hantar</button>
                                             <a href="/senarai" class="btn btn-warning">Kembali</a>
 
                                         </div>

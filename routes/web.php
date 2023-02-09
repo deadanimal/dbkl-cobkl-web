@@ -49,9 +49,14 @@ Route::get('/pendaftaran', function () {
 Route::get('senarai', [PengurusanPenggunaController::class, 'senarai']);
 Route::get('pengguna', [PengurusanPenggunaController::class, 'borangAdmin']);
 Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
+Route::get('pengguna/{id}', [PengurusanPenggunaController::class, 'satuPengguna']);
+Route::put('kemaskiniPengguna/{id}', [PengurusanPenggunaController::class, 'kemaskiniPengguna']);
+
+
 
 Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'borangAwam']);
 Route::get('staff', [PengurusanPenggunaController::class, 'borangStaff']);
+
 
 
 require __DIR__.'/auth.php';
