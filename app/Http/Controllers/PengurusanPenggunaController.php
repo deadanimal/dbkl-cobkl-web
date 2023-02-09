@@ -12,10 +12,10 @@ class PengurusanPenggunaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function satuAdmin()
+    public function borangAdmin()
     {
         //
-        return view('daftar.satu');
+        return view('daftar.borang');
     }
 
     public function senarai()
@@ -60,10 +60,16 @@ class PengurusanPenggunaController extends Controller
         return redirect('/senarai');
     }
 
-    public function satuAwam()
+    public function borangAwam()
     {
         //
-        return view('daftar.satuAwam');
+        return view('daftar.borangAwam');
+    }
+
+    public function borangStaff()
+    {
+        //
+        return view('daftar.borangStaff');
     }
 
     /**
