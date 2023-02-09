@@ -131,7 +131,7 @@
 						</a>
 						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
                             @role('admin')
-							<li class="sidebar-item active"><a class="sidebar-link" href="/pengguna">Pendaftaran Pengguna</a></li>
+							<li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Pendaftaran Pengguna</a></li>
                             @endrole
                             @role('public')
 							<li class="sidebar-item active"><a class="sidebar-link" href="/penggunaAwam">Pendaftaran Pengguna Awam</a></li>

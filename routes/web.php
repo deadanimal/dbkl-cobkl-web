@@ -46,6 +46,7 @@ Route::get('/pendaftaran', function () {
     return view('daftar.pendaftaran');
 })->middleware(['auth'])->name('pendaftaran');
 
+Route::get('senarai', [PengurusanPenggunaController::class, 'senarai']);
 Route::get('pengguna', [PengurusanPenggunaController::class, 'satuAdmin']);
 Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
 

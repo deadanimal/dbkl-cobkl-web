@@ -18,6 +18,16 @@ class PengurusanPenggunaController extends Controller
         return view('daftar.satu');
     }
 
+    public function senarai()
+    {
+        //
+
+        $penggunas = PengurusanPengguna::all();
+      
+
+        return view('daftar.senarai', compact('penggunas'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,11 +53,11 @@ class PengurusanPenggunaController extends Controller
        
         $user->save();
 
-        dd($user);
+        // dd($user);
 
         // Alert::success('Simpan berjaya.', 'Maklumat pensampelan telah disimpan.');
 
-        return redirect('/pendaftaran');
+        return redirect('/senarai');
     }
 
     public function satuAwam()

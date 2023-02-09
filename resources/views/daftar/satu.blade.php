@@ -165,7 +165,7 @@
                                         <div class="text-center">
 
                                             <button type="submit" class="btn btn-primary">Daftar</button>
-                                            <a href="/dashboard" class="btn btn-warning">Kembali</a>
+                                            <a href="/senarai" class="btn btn-warning">Kembali</a>
 
                                         </div>
                                        
