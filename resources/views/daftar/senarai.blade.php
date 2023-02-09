@@ -29,7 +29,7 @@
 
                 @role('public')
                 <a href="/penggunaAwam" class="btn float-end " style="width: fit-content"><button
-                class="btn btn-warning btn-block">Mohon Pengguna</button></a>
+                class="btn btn-warning btn-block">Daftar Pengguna Awam</button></a>
                 @endrole
 
                 <div class="card-body"  style="border-width: 1px; border-color:black;">
@@ -55,13 +55,13 @@
                                 <td>{{$pengguna->bangsa}}</td>
                                 <td class="table-action">
                                     @role('admin')
-                                    <a href="pengguna/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
+                                    <a href="/pengguna/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
                                     @endrole  
                                     @role('staff')
-                                    <a href="staff/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
+                                    <a href="/staff/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
                                     @endrole 
                                     @role('public')
-                                    <a href="penggunaAwam/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
+                                    <a href="/penggunaAwam/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a> 
                                     @endrole 
                                 </td>
                    

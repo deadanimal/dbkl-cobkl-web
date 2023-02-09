@@ -100,6 +100,40 @@ class PengurusanPenggunaController extends Controller
         //
         return view('daftar.borangAwam');
     }
+
+    public function satuAwam(Request $request) {
+        $id = (int)$request->route('id');
+        $pengguna = PengurusanPengguna::find($id);        
+        return view('daftar.satuAwam', compact('pengguna'));
+    }
+
+    public function kemaskiniAwam(Request $request){
+
+        $id = (int)$request->route('id');
+
+        $pengguna = PengurusanPengguna::find($id);        
+
+        $pengguna->pengguna = $request->pengguna;
+        $pengguna->pengenalan = $request->pengenalan;
+        $pengguna->nombor_pengenalan = $request->nombor_pengenalan;
+        $pengguna->nama = $request->nama;
+        $pengguna->jantina = $request->jantina;
+        $pengguna->bangsa = $request->bangsa;
+        $pengguna->telefon = $request->telefon;
+        $pengguna->emel = $request->emel;
+        $pengguna->alamat = $request->alamat;
+        $pengguna->jawatan = $request->jawatan;
+
+        // dd($pengguna);
+
+        $pengguna->save();
+
+        Alert::success('Kemaskini berjaya.', 'Maklumat telah dikemaskini.');
+
+
+        return redirect('/senarai');
+
+    }
     
 
     public function borangStaff()

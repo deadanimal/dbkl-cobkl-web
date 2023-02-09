@@ -12,20 +12,13 @@
 				<div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
 					<div class="d-table-cell align-middle">
 
-						<div class="text-center mt-4">
-							<h1 class="h2">Welcome back!</h1>
-							<p class="lead">
-								Sign in to your account to continue
-							</p>
-						</div>
 
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
-									<div class="text-center">
-										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
-									</div>
-									<form method="POST" action="/penggunaAwam">
+									
+									<form method="POST" action="/kemaskiniAwam/{{$pengguna->id}}">
+                                        @method('PUT')
                                         @csrf
                                     
                                         <div class="card">
@@ -34,50 +27,30 @@
                                                     <label>Jenis Pengguna</label>
                                                     <div class="input-group mb-3">
                                                         <select class="form-select flex-grow-1" name="pengguna" >
-                                                            <option selected disabled>Sila Pilih</option>
+                                                            <option selected disabled>{{ $pengguna->pengguna }}</option>
                                                             <option value="admin">Admin</option>
                                                             <option value="staff">Staff</option>
                                                             <option value="public">Public</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="pengguna" >Pilih</button>
                                                     </div>
-                                                    {{-- <input class="form-control form-control-lg" type="text" name="pengguna" /> --}}
                                                 </div>
                                     
                                                 <br>
-                                    
-                                                <div class="mb-3">
-                                                    <label>Jenis Pengenalan</label>
-                                                    <div class="input-group mb-3">
-                                                        <select class="form-select flex-grow-1" name="pengenalan">
-                                                            <option selected disabled>Sila Pilih</option>
-                                                            <option value="kad_pengenalan">Kad Pengenalan</option>
-                                                            <option value="passport">Passport</option>
-                                                        </select>
-                                                        <button class="btn btn-secondary" type="button" name="pengenalan" >Pilih</button>
-                                                    </div>
-                                                    {{-- <input class="form-control form-control-lg" type="text" name="pengenalan" /> --}}
-                                                </div>
-                                    
-                                                {{-- <div class="mb-3">
-                                                    <label>No. Kad Pengenalan</label>
-                                                    <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" />
-                                                </div> --}}
+    
                                     
                                                 <div class="mb-3">
                                                     <label>Nama</label>
-                                                    <input class="form-control form-control-lg" type="text" name="nama" />
+                                                    <input class="form-control form-control-lg" type="text" name="nama"  value="{{ $pengguna->nombor_pengenalan }}" />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Jantina</label>
                                                     <div class="input-group mb-3">
                                                         <select class="form-select flex-grow-1" name="jantina">
-                                                            <option selected disabled>Sila Pilih</option>
+                                                            <option selected disabled>{{ $pengguna->jantina }}</option>
                                                             <option value="lelaki">Lelaki</option>
                                                             <option value="perempuan">Perempuan</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="jantina" >Pilih</button>
                                                     </div>                                                
                                                 </div>
                                     
@@ -85,7 +58,7 @@
                                                     <label>Bangsa</label>
                                                     <div class="input-group mb-3">
                                                         <select class="form-select flex-grow-1" name="bangsa">
-                                                            <option selected disabled>Sila Pilih</option>
+                                                            <option selected disabled>{{ $pengguna->bangsa }}</option>
                                                             <option value="Melayu">Melayu</option>
                                                             <option value="Cina">Cina</option>
                                                             <option value="India">India</option>
@@ -97,39 +70,29 @@
                                     
                                                 <div class="mb-3">
                                                     <label>No Telefon</label>
-                                                    <input class="form-control form-control-lg" type="number" name="telefon" />
+                                                    <input class="form-control form-control-lg" type="number" name="telefon" value="{{ $pengguna->telefon }}" />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Emel</label>
-                                                    <input class="form-control form-control-lg" type="email" name="email" />
+                                                    <input class="form-control form-control-lg" type="email" name="email" value="{{ $pengguna->email }}" />
                                                 </div>
-                                    
-                                                {{-- <div class="mb-3">
-                                                    <label>Alamat</label>
-                                                    <input class="form-control form-control-lg" type="text" name="alamat" />
-                                                </div>
-                                    
-                                                <div class="mb-3">
-                                                    <label>Jawatan</label>
-                                                    <input class="form-control form-control-lg" type="text" name="jawatan" />
-                                                </div> --}}
 
                                                 <div class="mb-3">
                                                     <label>Katalaluan</label>
-                                                    <input class="form-control form-control-lg" type="password" name="password" />
+                                                    <input class="form-control form-control-lg" type="password" name="password" value="{{ $pengguna->password }}" />
                                                 </div>
 
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label>Sahkan Katalaluan</label>
                                                     <input class="form-control form-control-lg" type="password" name="sah_katalaluan" />
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                                                            
                                         <div class="text-center">
 
-                                            <button type="submit" class="btn btn-primary">Hantar</button>
+                                            <button type="submit" class="btn btn-primary">Kemaskini</button>
                                             <a href="/senarai" class="btn btn-warning">Kembali</a>
 
                                         </div>
