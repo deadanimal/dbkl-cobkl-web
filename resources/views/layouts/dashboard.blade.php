@@ -133,6 +133,9 @@
                             @role('admin')
 							<li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Pendaftaran Pengguna</a></li>
                             @endrole
+                            @role('staff')
+							<li class="sidebar-item active"><a class="sidebar-link" href="/staff">Permohonan Staff</a></li>
+                            @endrole
                             @role('public')
 							<li class="sidebar-item active"><a class="sidebar-link" href="/penggunaAwam">Pendaftaran Pengguna Awam</a></li>
                             @endrole

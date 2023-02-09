@@ -47,10 +47,11 @@ Route::get('/pendaftaran', function () {
 })->middleware(['auth'])->name('pendaftaran');
 
 Route::get('senarai', [PengurusanPenggunaController::class, 'senarai']);
-Route::get('pengguna', [PengurusanPenggunaController::class, 'satuAdmin']);
+Route::get('pengguna', [PengurusanPenggunaController::class, 'borangAdmin']);
 Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
 
-Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'satuAwam']);
+Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'borangAwam']);
+Route::get('staff', [PengurusanPenggunaController::class, 'borangStaff']);
 
 
 require __DIR__.'/auth.php';
