@@ -25,7 +25,7 @@
 									<div class="text-center">
 										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
 									</div>
-									<form method="POST" action="/pengguna">
+									<form method="POST" action="/penggunaAwam">
                                         @csrf
                                     
                                         <div class="card">
@@ -59,10 +59,10 @@
                                                     {{-- <input class="form-control form-control-lg" type="text" name="pengenalan" /> --}}
                                                 </div>
                                     
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label>No. Kad Pengenalan</label>
                                                     <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" />
-                                                </div>
+                                                </div> --}}
                                     
                                                 <div class="mb-3">
                                                     <label>Nama</label>
@@ -105,7 +105,7 @@
                                                     <input class="form-control form-control-lg" type="email" name="email" />
                                                 </div>
                                     
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label>Alamat</label>
                                                     <input class="form-control form-control-lg" type="text" name="alamat" />
                                                 </div>
@@ -113,74 +113,27 @@
                                                 <div class="mb-3">
                                                     <label>Jawatan</label>
                                                     <input class="form-control form-control-lg" type="text" name="jawatan" />
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="mb-3">
                                                     <label>Katalaluan</label>
                                                     <input class="form-control form-control-lg" type="password" name="password" />
                                                 </div>
 
-                                                {{-- <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label>Sahkan Katalaluan</label>
                                                     <input class="form-control form-control-lg" type="password" name="sah_katalaluan" />
-                                                </div> --}}
+                                                </div>
                                             </div>
                                         </div>
-                                    
-                                        <!-- Name -->
-                                        {{-- <div>
-                                            <x-label for="name" :value="__('Name')" />
-                                    
-                                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-                                        </div> --}}
-                                    
-                                        <!-- Email Address -->
-                                        {{-- <div class="mt-4">
-                                            <x-label for="email" :value="__('Email')" />
-                                    
-                                            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-                                        </div> --}}
-                                    
-                                        <!-- Password -->
-                                        {{-- <div class="mt-4">
-                                            <x-label for="password" :value="__('Password')" />
-                                    
-                                            <x-input id="password" class="block mt-1 w-full"
-                                                            type="password"
-                                                            name="password"
-                                                            required autocomplete="new-password" />
-                                        </div> --}}
-                                    
-                                        <!-- Confirm Password -->
-                                        {{-- <div class="mt-4">
-                                            <x-label for="password_confirmation" :value="__('Confirm Password')" />
-                                    
-                                            <x-input id="password_confirmation" class="block mt-1 w-full"
-                                                            type="password"
-                                                            name="password_confirmation" required />
-                                        </div> --}}
-                                    
-                                        {{-- below --}}
-                                        {{-- <a href="{{ route('login') }}" class="btn btn-secondary">Sudah Daftar?</a> --}}
+                                                                           
                                         <div class="text-center">
 
                                             <button type="submit" class="btn btn-primary">Daftar</button>
-                                            <a href="/senarai" class="btn btn-warning">Kembali</a>
+                                            <a href="/dashboard" class="btn btn-warning">Kembali</a>
 
                                         </div>
                                        
-
-
-{{-- 
-                                        <div class="flex items-center justify-end mt-4">
-                                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                                                {{ __('Sudah Daftar?') }}
-                                            </a>
-                                    
-                                            <x-button class="ml-4">
-                                                {{ __('Daftar') }}
-                                            </x-button>
-                                        </div> --}}
                                     </form>
 								</div>
 							</div>

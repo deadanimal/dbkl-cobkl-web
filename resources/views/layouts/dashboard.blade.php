@@ -130,7 +130,12 @@
 							<i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Pengurusan Pengguna</span>
 						</a>
 						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
-							<li class="sidebar-item active"><a class="sidebar-link" href="/pengguna">Pendaftaran Pengguna</a></li>
+                            @role('admin')
+							<li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Pendaftaran Pengguna</a></li>
+                            @endrole
+                            @role('public')
+							<li class="sidebar-item active"><a class="sidebar-link" href="/penggunaAwam">Pendaftaran Pengguna Awam</a></li>
+                            @endrole
 							{{-- <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html">Analytics</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a></li> --}}
 						</ul>
@@ -300,7 +305,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 
-
+    @yield('script')
 
     <script>
         $(function() {
