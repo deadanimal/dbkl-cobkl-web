@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PengurusanPengguna;
 use Illuminate\Http\Request;
+use Alert;
 
 class PengurusanPenggunaController extends Controller
 {
@@ -58,6 +59,40 @@ class PengurusanPenggunaController extends Controller
         // Alert::success('Simpan berjaya.', 'Maklumat pensampelan telah disimpan.');
 
         return redirect('/senarai');
+    }
+
+    public function satuPengguna(Request $request) {
+        $id = (int)$request->route('id');
+        $pengguna = PengurusanPengguna::find($id);        
+        return view('daftar.satuBorang', compact('pengguna'));
+    }
+
+    public function kemaskiniPengguna(Request $request){
+
+        $id = (int)$request->route('id');
+
+        $pengguna = PengurusanPengguna::find($id);        
+
+        $pengguna->pengguna = $request->pengguna;
+        $pengguna->pengenalan = $request->pengenalan;
+        $pengguna->nombor_pengenalan = $request->nombor_pengenalan;
+        $pengguna->nama = $request->nama;
+        $pengguna->jantina = $request->jantina;
+        $pengguna->bangsa = $request->bangsa;
+        $pengguna->telefon = $request->telefon;
+        $pengguna->emel = $request->emel;
+        $pengguna->alamat = $request->alamat;
+        $pengguna->jawatan = $request->jawatan;
+
+        // dd($pengguna);
+
+        $pengguna->save();
+
+        Alert::success('Kemaskini berjaya.', 'Maklumat telah dikemaskini.');
+
+
+        return redirect('/senarai');
+
     }
 
     public function borangAwam()

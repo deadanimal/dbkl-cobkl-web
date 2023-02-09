@@ -30,7 +30,8 @@
                                 <th style="width:25%">Pengguna</th>
                                 <th style="width:10%">Nama</th>
                                 <th style="width:10%">Jantina</th>
-                                <th style="width:10%">Bangsa</th>   
+                                <th style="width:45%">Bangsa</th>
+                                <th></th>   
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +43,9 @@
                                 <td>{{$pengguna->nama}}</td>
                                 <td>{{$pengguna->jantina}}</td>
                                 <td>{{$pengguna->bangsa}}</td>
+                                <td class="table-action">
+                                    <a href="pengguna/{{$pengguna->id}}"><i class="align-middle fas fa-fw fa-pen"></i></i></a>   
+                                </td>
                    
                                
                             </tr>
