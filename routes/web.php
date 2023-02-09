@@ -46,7 +46,10 @@ Route::get('/pendaftaran', function () {
     return view('daftar.pendaftaran');
 })->middleware(['auth'])->name('pendaftaran');
 
-Route::get('pengguna', [PengurusanPenggunaController::class, 'satuPengguna']);
+Route::get('pengguna', [PengurusanPenggunaController::class, 'satuAdmin']);
 Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
+
+Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'satuAwam']);
+
 
 require __DIR__.'/auth.php';

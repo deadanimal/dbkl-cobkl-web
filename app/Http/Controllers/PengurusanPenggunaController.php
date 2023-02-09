@@ -12,7 +12,7 @@ class PengurusanPenggunaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function satuPengguna()
+    public function satuAdmin()
     {
         //
         return view('daftar.satu');
@@ -48,6 +48,12 @@ class PengurusanPenggunaController extends Controller
         // Alert::success('Simpan berjaya.', 'Maklumat pensampelan telah disimpan.');
 
         return redirect('/pendaftaran');
+    }
+
+    public function satuAwam()
+    {
+        //
+        return view('daftar.satuAwam');
     }
 
     /**
