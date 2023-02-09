@@ -12,9 +12,10 @@ class PengurusanPenggunaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function satuPengguna()
     {
         //
+        return view('daftar.satu');
     }
 
     /**

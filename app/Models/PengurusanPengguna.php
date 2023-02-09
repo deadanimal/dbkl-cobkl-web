@@ -9,6 +9,8 @@ class PengurusanPengguna extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];  
+
     protected $table = 'pengurusan_penggunas';  
 
 }
