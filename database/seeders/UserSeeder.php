@@ -20,20 +20,18 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             [
-                'name' => 'P1: Admin',
-                'email' => 'dbkl-cobkl-p1@pipeline.com.my',
+                'name' => 'admin',
+                // 'email' => 'dbkl-cobkl-p1@pipeline.com.my',
+                'ic' => '002023140001',
                 'password' => Hash::make('PipelineForever'),
             ],
             [
-                'name' => 'P2: Staff',
-                'email' => 'dbkl-cobkl-p2@pipeline.com.my',
+                'name' => 'staff',
+                // 'email' => 'dbkl-cobkl-p2@pipeline.com.my',
+                'ic' => '002023140002',
                 'password' => Hash::make('PipelineForever'),
             ],
-            [
-                'name' => 'P3: Public',
-                'email' => 'dbkl-cobkl-p3@pipeline.com.my',
-                'password' => Hash::make('PipelineForever'),
-            ],
+          
                                                                                         
         ]);
     }
