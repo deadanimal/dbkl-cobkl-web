@@ -16,10 +16,16 @@
             @csrf
 
             <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+            {{-- <div>
+                <x-label for="email" :value="__('Email')"  />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="hidden" name="email" :value="old('email')" required autofocus />
+            </div> --}}
+
+            {{-- IC No --}}
+            <div>
+                <x-label for="ic" :value="__('IC Number')" />
+                <x-input id="ic" class="block mt-1 w-full" type="text" name="ic" :value="old('ic')" required autofocus />
             </div>
 
             <!-- Password -->

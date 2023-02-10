@@ -225,6 +225,11 @@
                                                                 <a href="/register"
                                                                     class="btn btn-outline-primary w-100">DAFTAR</a>
                                                             </div>
+
+                                                            <div class="mb-1">
+                                                                <a href="/register"
+                                                                    class="btn btn-outline-primary w-100">DAFTAR SEBAGAI PENGGUNA</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -356,6 +361,11 @@
                                                             <div class="mb-1">
                                                                 <a href="/register"
                                                                     class="btn btn-outline-primary w-100">DAFTAR</a>
+                                                            </div>
+
+                                                            <div class="mb-1">
+                                                                <a href="/penggunaAwam"
+                                                                    class="btn btn-outline-primary w-100">DAFTAR SEBAGAI PENGGUNA AWAM</a>
                                                             </div>
                                                         </div>
                                                     </div>
