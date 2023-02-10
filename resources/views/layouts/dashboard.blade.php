@@ -137,7 +137,7 @@
 							<li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Permohonan Staff</a></li>
                             @endrole
                             @role('public')
-							<li class="sidebar-item active"><a class="sidebar-link" href="/penggunaAwam">Pendaftaran Pengguna Awam</a></li>
+							<li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Pendaftaran Pengguna Awam</a></li>
                             @endrole
 							{{-- <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html">Analytics</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a></li> --}}

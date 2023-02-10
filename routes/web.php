@@ -55,7 +55,8 @@ Route::put('kemaskiniPengguna/{id}', [PengurusanPenggunaController::class, 'kema
 
 
 Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'borangAwam']);
-Route::put('penggunaAwam/{id}', [PengurusanPenggunaController::class, 'kemaskiniPengguna']);
+Route::get('penggunaAwam/{id}', [PengurusanPenggunaController::class, 'satuAwam']);
+Route::put('kemaskiniAwam/{id}', [PengurusanPenggunaController::class, 'kemaskiniAwam']);
 
 Route::get('staff', [PengurusanPenggunaController::class, 'borangStaff']);
 Route::get('staff/{id}', [PengurusanPenggunaController::class, 'satuStaff']);

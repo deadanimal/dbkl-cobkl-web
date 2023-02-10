@@ -33,13 +33,12 @@
                                                 <div class="mb-3">
                                                     <label>Jenis Pengguna</label>
                                                     <div class="input-group mb-3">
-                                                        <select class="form-select flex-grow-1" name="pengguna" >
+                                                        <select class="form-select flex-grow-1" name="pengguna" required >
                                                             <option selected disabled>Sila Pilih</option>
                                                             <option value="admin">Admin</option>
                                                             <option value="staff">Staff</option>
                                                             <option value="public">Public</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="pengguna" >Pilih</button>
                                                     </div>
                                                     {{-- <input class="form-control form-control-lg" type="text" name="pengguna" /> --}}
                                                 </div>
@@ -49,75 +48,72 @@
                                                 <div class="mb-3">
                                                     <label>Jenis Pengenalan</label>
                                                     <div class="input-group mb-3">
-                                                        <select class="form-select flex-grow-1" name="pengenalan">
+                                                        <select class="form-select flex-grow-1" name="pengenalan" required>
                                                             <option selected disabled>Sila Pilih</option>
                                                             <option value="kad_pengenalan">Kad Pengenalan</option>
                                                             <option value="passport">Passport</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="pengenalan" >Pilih</button>
                                                     </div>
                                                     {{-- <input class="form-control form-control-lg" type="text" name="pengenalan" /> --}}
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>No. Kad Pengenalan</label>
-                                                    <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" />
+                                                    <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" required />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Nama</label>
-                                                    <input class="form-control form-control-lg" type="text" name="nama" />
+                                                    <input class="form-control form-control-lg" type="text" name="nama" required />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Jantina</label>
                                                     <div class="input-group mb-3">
-                                                        <select class="form-select flex-grow-1" name="jantina">
+                                                        <select class="form-select flex-grow-1" name="jantina" required>
                                                             <option selected disabled>Sila Pilih</option>
                                                             <option value="lelaki">Lelaki</option>
                                                             <option value="perempuan">Perempuan</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="jantina" >Pilih</button>
                                                     </div>                                                
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Bangsa</label>
                                                     <div class="input-group mb-3">
-                                                        <select class="form-select flex-grow-1" name="bangsa">
+                                                        <select class="form-select flex-grow-1" name="bangsa" required>
                                                             <option selected disabled>Sila Pilih</option>
                                                             <option value="Melayu">Melayu</option>
                                                             <option value="Cina">Cina</option>
                                                             <option value="India">India</option>
                                                             <option value="lain">Lain-lain</option>
                                                         </select>
-                                                        <button class="btn btn-secondary" type="button" name="bangsa" >Pilih</button>
                                                     </div> 
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>No Telefon</label>
-                                                    <input class="form-control form-control-lg" type="number" name="telefon" />
+                                                    <input class="form-control form-control-lg" type="number" name="telefon" required />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Emel</label>
-                                                    <input class="form-control form-control-lg" type="email" name="email" />
+                                                    <input class="form-control form-control-lg" type="email" name="email" required />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Alamat</label>
-                                                    <input class="form-control form-control-lg" type="text" name="alamat" />
+                                                    <input class="form-control form-control-lg" type="text" name="alamat" required />
                                                 </div>
                                     
                                                 <div class="mb-3">
                                                     <label>Jawatan</label>
-                                                    <input class="form-control form-control-lg" type="text" name="jawatan" />
+                                                    <input class="form-control form-control-lg" type="text" name="jawatan" required />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label>Katalaluan</label>
-                                                    <input class="form-control form-control-lg" type="password" name="password" />
+                                                    <input class="form-control form-control-lg" type="password" name="password" required />
                                                 </div>
 
                                                 {{-- <div class="mb-3">

@@ -25,7 +25,7 @@
 									<div class="text-center">
 										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
 									</div>
-									<form method="POST" action="/penggunaAwam">
+									<form method="POST" action="/pengguna">
                                         @csrf
                                     
                                         <div class="card">
@@ -129,8 +129,8 @@
                                                                            
                                         <div class="text-center">
 
-                                            <button type="submit" class="btn btn-primary">Daftar</button>
-                                            <a href="/dashboard" class="btn btn-warning">Kembali</a>
+                                            <button type="submit" class="btn btn-primary">Hantar</button>
+                                            <a href="/senarai" class="btn btn-warning">Kembali</a>
 
                                         </div>
                                        

@@ -14,6 +14,21 @@
 
 						<div class="card">
 							<div class="card-body">
+
+                                 {{-- Message --}}
+                                 @if (session()->has('message'))
+                                 <div class="alert alert-success alert-outline-coloured alert-dismissible" role="alert">
+                                     <div class="alert-icon">
+                                         <i class="fa-light fa-check"></i>
+                                     </div>
+                                     <div class="alert-message">
+                                         <strong>{{session('message')}}</strong>
+                                     </div>
+ 
+                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                 </div>
+                                 @endif
+                                 
 								<div class="m-sm-4">
 									<div class="text-center">
 										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
