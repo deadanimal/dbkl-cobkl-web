@@ -25,7 +25,7 @@
 									<div class="text-center">
 										<img src="img/dbkl.png" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132" />
 									</div>
-									<form method="POST" action="/penggunaAwam">
+									<form method="POST" action="/pengguna">
                                         @csrf
                                     
                                         <div class="card">
