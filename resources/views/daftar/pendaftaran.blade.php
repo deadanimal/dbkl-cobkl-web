@@ -6,6 +6,9 @@
 
     </x-slot>
 
+    @include('sweetalert::alert')
+
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -45,8 +48,8 @@
                                 <br>
                     
                                 <div class="mb-3">
-                                    <label>No. Kad Pengenalan</label>
-                                    <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" />
+                                    <label>No. Kad Pengenalan atau Passport</label>
+                                    <input class="form-control form-control-lg" type="text" name="nombor_pengenalan" />
                                 </div>
 
                                 <br>
@@ -91,7 +94,7 @@
                     
                                 <div class="mb-3">
                                     <label>Emel</label>
-                                    <input class="form-control form-control-lg" type="email" name="emel" />
+                                    <input class="form-control form-control-lg" type="email" name="email" />
                                 </div>
 
                                 <br>

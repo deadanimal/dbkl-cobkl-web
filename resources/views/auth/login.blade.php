@@ -24,8 +24,8 @@
 
             {{-- IC No --}}
             <div>
-                <x-label for="ic" :value="__('IC Number')" />
-                <x-input id="ic" class="block mt-1 w-full" type="text" name="ic" :value="old('ic')" required autofocus />
+                <x-label for="ic" :value="__('Email')" />
+                <x-input id="ic" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->

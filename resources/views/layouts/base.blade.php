@@ -154,104 +154,11 @@
                                     @endif
                                 </li>
                                 <li class="nav-item mr-auto">
-                                    <a class="btn active1 text-white mx-3" href="/perkhidmatan-kami">LOG
+                                    <a class="btn btn2 mx-3" href="/dashboard">LOG
                                         MASUK</a>
                              
                                 </li>
-                                <li class="nav-item mr-auto">
-                                    @if (Route::has('login'))
-                                        @auth
-                                            <a class="btn active1 text-white mx-3" href="/perkhidmatan-kami"><i
-                                                    class="far fa-user-circle fa-lg"></i>&nbsp;&nbsp;STAF</a>
-                                        @else
-                                            <a class="btn btn1 mx-3" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#modalLogin"><i
-                                                    class="far fa-user-circle fa-lg"></i>&nbsp;&nbsp;LOG
-                                                MASUK</a>
-                                            <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog"
-                                                aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        {{-- <div class="modal-header">
-                                                <h5 class="modal-title">LOG MASUK</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div> --}}
-                                                        <div class="modal-body m-5">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <h5 class="modal-title">LOG MASUK</h5>
-                                                                </div>
-                                                                <div class="col text-end">
-                                                                     <a href="/login" class="btn btn-primary w-100">LOG
-                                                                        MASUK</a>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                            </div>
-
-                                                            <form action="/login">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label">E-mel</label>
-                                                                    <input type="email" class="form-control"
-                                                                        placeholder="user@gmail.com">
-                                                                </div>
-                                                                <div class="mb-0">
-                                                                    <label class="form-label">Kata Laluan</label>
-                                                                    <input type="password" class="form-control"
-                                                                        placeholder="Password" id="password-field">
-                                                                    <span toggle="#password-field"
-                                                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                                                                </div>
-                                                                <div class="text-end mb-3">
-                                                                    <a href="/forgot-password" target="_blank"
-                                                                        class="text-primary">Lupa
-                                                                        Kata Laluan?</a>
-                                                                </div>
-
-                                                                <div class="mb-0">
-                                                                    <button type="submit" class="btn btn-primary w-100">LOG
-                                                                        MASUK</button>
-                                                                    {{-- <a href="/login" class="btn btn-primary w-100">LOG
-                                                                        MASUK</a> --}}
-                                                                </div>
-                                                            </form>
-
-                                                            <div class="mb-0 text-center">
-                                                                <span class="text-sm">ATAU</span>
-                                                            </div>
-
-                                                            <div class="mb-1">
-                                                                <a href="/register"
-                                                                    class="btn btn-outline-primary w-100">DAFTAR</a>
-                                                            </div>
-
-                                                            <div class="mb-1">
-                                                                <a href="/register"
-                                                                    class="btn btn-outline-primary w-100">DAFTAR SEBAGAI PENGGUNA</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            {{-- @if (Route::has('register'))
-                                            <a href="{{ route('register') }}"
-                                                class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                        @endif --}}
-                                        @endauth
-                                    @endif
-
-                                </li>
-                                <li class="nav-item mr-auto">
-                                    {{-- <a class="btn-btn-primary active1 text-black mx-3" href="/logout"><i
-                                        class="far fa-user-circle fa-lg"></i>&nbsp;&nbsp;keluar</a> --}}
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                    
-                                       <button type="submit" class="btn btn-primary">keluar</button>
-                                    </form>
-                                </li>
+                              
                             </ul>
                         @else
                             <ul class="navbar-nav m-auto">
@@ -358,10 +265,10 @@
                                                                 <span class="text-sm">ATAU</span>
                                                             </div>
 
-                                                            <div class="mb-1">
+                                                            {{-- <div class="mb-1">
                                                                 <a href="/register"
                                                                     class="btn btn-outline-primary w-100">DAFTAR</a>
-                                                            </div>
+                                                            </div> --}}
 
                                                             <div class="mb-1">
                                                                 <a href="/penggunaAwam"

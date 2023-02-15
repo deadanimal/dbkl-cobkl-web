@@ -137,7 +137,8 @@
                                                         
                                                             <div class="card">
                                                                 <div class="card-body">
-                                                                    <div class="mb-3">
+                                                                    <input type="hidden" name="pengguna" value="public">
+                                                                    {{-- <div class="mb-3">
                                                                         <label>Jenis Pengguna</label>
                                                                         <div class="input-group mb-3">
                                                                             <select class="form-select flex-grow-1" name="pengguna" >
@@ -148,8 +149,8 @@
                                                                             </select>
                                                                             <button class="btn btn-secondary" type="button" name="pengguna" >Pilih</button>
                                                                         </div>
-                                                                        {{-- <input class="form-control form-control-lg" type="text" name="pengguna" /> --}}
-                                                                    </div>
+                                                                         <input class="form-control form-control-lg" type="text" name="pengguna" /> 
+                                                                    </div> --}}
                                                         
                                                                     <br>
                                                         
@@ -166,10 +167,10 @@
                                                                         {{-- <input class="form-control form-control-lg" type="text" name="pengenalan" /> --}}
                                                                     </div>
                                                         
-                                                                    {{-- <div class="mb-3">
-                                                                        <label>No. Kad Pengenalan</label>
-                                                                        <input class="form-control form-control-lg" type="number" name="nombor_pengenalan" />
-                                                                    </div> --}}
+                                                                    <div class="mb-3">
+                                                                        <label>No. Kad Pengenalan atau Passport</label>
+                                                                        <input class="form-control form-control-lg" type="text" name="nombor_pengenalan" />
+                                                                    </div>
                                                         
                                                                     <div class="mb-3">
                                                                         <label>Nama</label>
@@ -227,10 +228,10 @@
                                                                         <input class="form-control form-control-lg" type="password" name="password" />
                                                                     </div>
                     
-                                                                    <div class="mb-3">
+                                                                    {{-- <div class="mb-3">
                                                                         <label>Sahkan Katalaluan</label>
                                                                         <input class="form-control form-control-lg" type="password" name="sah_katalaluan" />
-                                                                    </div>
+                                                                    </div> --}}
                                                                 </div>
                                                             </div>
                                                                                                

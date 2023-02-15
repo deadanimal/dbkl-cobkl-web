@@ -3,8 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\PengurusanPengguna;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Alert;
+use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 
 class PengurusanPenggunaController extends Controller
 {
@@ -23,7 +30,7 @@ class PengurusanPenggunaController extends Controller
     {
         //
 
-        $penggunas = PengurusanPengguna::all();
+        $penggunas = User::all();
       
 
         return view('daftar.senarai', compact('penggunas'));
@@ -36,25 +43,8 @@ class PengurusanPenggunaController extends Controller
      */
     public function ciptaPengguna(Request $request)
     {
-        //
-        $user = $request->user();
 
-        $request->validate([
-
-            'pengguna' => 'required|string',
-            'pengenalan' => 'required|string',
-            'nombor_pengenalan' => 'required|numeric',
-            'nama' => 'required|string',
-            'jantina' => 'required|string',
-            'bangsa' => 'required|string',
-            'telefon' => 'required|numeric',
-            'emel' => 'required|string',
-            'alamat' => 'required|string',
-            'jawatan' => 'required|string',
-
-        ]);
-
-        $user = New PengurusanPengguna([
+        User::create([
             'pengguna' => $request->get('pengguna'),
             'pengenalan' => $request->get('pengenalan'),
             'nombor_pengenalan' => $request->get('nombor_pengenalan'),
@@ -62,37 +52,19 @@ class PengurusanPenggunaController extends Controller
             'jantina' => $request->get('jantina'),
             'bangsa' => $request->get('bangsa'),
             'telefon' => $request->get('telefon'),
-            'emel' => $request->get('emel'),
+            'email' => $request->get('email'),
             'alamat' => $request->get('alamat'),
             'jawatan' => $request->get('jawatan'),
+            'password' => Hash::make($request->password),
 
-        ]);
-
-        $user = New PengurusanPengguna;
-
-        // $user->pengguna = $request->pengguna;
-        // $user->pengenalan = $request->pengenalan;
-        // $user->nombor_pengenalan = $request->nombor_pengenalan;
-        // $user->nama = $request->nama;
-        // $user->jantina = $request->jantina;
-        // $user->bangsa = $request->bangsa;
-        // $user->telefon = $request->telefon;
-        // $user->emel = $request->emel;
-        // $user->alamat = $request->alamat;
-        // $user->jawatan = $request->jawatan;
-       
-        $user->save();
-
-        // dd($user);
-
-        // Alert::success('Simpan berjaya.', 'Maklumat pensampelan telah disimpan.');
-
-        return redirect('/senarai')->with('Berjaya', 'Telah dihantar');
+        ]);   
+        Alert::success('Pengguna dicipta', 'Maklumat telah disimpan.');
+        return back();
     }
 
     public function satuPengguna(Request $request) {
         $id = (int)$request->route('id');
-        $pengguna = PengurusanPengguna::find($id);        
+        $pengguna = User::find($id);        
         return view('daftar.satuBorang', compact('pengguna'));
     }
 
@@ -100,7 +72,7 @@ class PengurusanPenggunaController extends Controller
 
         $id = (int)$request->route('id');
 
-        $pengguna = PengurusanPengguna::find($id);        
+        $pengguna = User::find($id);        
 
         $pengguna->pengguna = $request->pengguna;
         $pengguna->pengenalan = $request->pengenalan;
@@ -180,7 +152,7 @@ class PengurusanPenggunaController extends Controller
 
     public function satuStaff(Request $request) {
         $id = (int)$request->route('id');
-        $pengguna = PengurusanPengguna::find($id);        
+        $pengguna = User::find($id);        
         return view('daftar.satuStaff', compact('pengguna'));
     }
 
@@ -188,7 +160,7 @@ class PengurusanPenggunaController extends Controller
 
         $id = (int)$request->route('id');
 
-        $pengguna = PengurusanPengguna::find($id);        
+        $pengguna = User::find($id);        
 
         $pengguna->pengguna = $request->pengguna;
         $pengguna->pengenalan = $request->pengenalan;
@@ -204,8 +176,6 @@ class PengurusanPenggunaController extends Controller
         // dd($pengguna);
 
         $pengguna->save();
-
-        // popup Alert not working
         Alert::success('Kemaskini berjaya.', 'Maklumat telah dikemaskini.');
 
         session()->flash('message', 'Borang telah dikemaskini.');
@@ -216,59 +186,4 @@ class PengurusanPenggunaController extends Controller
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PengurusanPengguna  $pengurusanPengguna
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PengurusanPengguna $pengurusanPengguna)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\PengurusanPengguna  $pengurusanPengguna
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(PengurusanPengguna $pengurusanPengguna)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\PengurusanPengguna  $pengurusanPengguna
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, PengurusanPengguna $pengurusanPengguna)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\PengurusanPengguna  $pengurusanPengguna
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PengurusanPengguna $pengurusanPengguna)
-    {
-        //
-    }
 }
