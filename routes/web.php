@@ -6,6 +6,12 @@ use App\Http\Controllers\KandunganController;
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Models\KandunganDirektori;
+use App\Models\KandunganFaq;
+use App\Models\KandunganLain;
+use App\Models\KandunganProgram;
+
 Route::get('/', function () {
     return view('laman_utama.landing');
 });
@@ -15,11 +21,13 @@ Route::get('/mengenai-kami', function () {
 });
 
 Route::get('/direktori', function () {
-    return view('laman_utama.direktori');
+    $direktoris = KandunganDirektori::all();
+    return view('laman_utama.direktori', compact('direktoris'));
 });
 
 Route::get('/soalan-lazim', function () {
-    return view('laman_utama.soalan_lazim');
+    $faqs = KandunganFaq::all();
+    return view('laman_utama.soalan_lazim', compact('faqs'));
 });
 
 Route::get('/pengumuman', function () {

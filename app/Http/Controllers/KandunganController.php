@@ -15,6 +15,27 @@ class KandunganController extends Controller
         return view('kandungan.direktori', compact('direktoris'));
     }
 
+    public function cipta_direktoris(Request $request) {
+        $direktori = New KandunganDirektori;
+        $direktori->nama = $request->nama;
+        $direktori->jawatan = $request->jawatan;
+        $direktori->email = $request->email;
+        $direktori->telefon = $request->telefon;
+        $direktori->save();
+        return back();
+    }     
+    
+    public function kemaskini_direktoris(Request $request) {
+        $id = (int)$request->route('id');
+        $direktori =KandunganDirektori::find($id);
+        $direktori->nama = $request->nama;
+        $direktori->jawatan = $request->jawatan;
+        $direktori->email = $request->email;
+        $direktori->telefon = $request->telefon;
+        $direktori->save();
+        return back();
+    }       
+
     public function senarai_faq() {
         $faqs = KandunganFaq::all();
         return view('kandungan.faq', compact('faqs'));

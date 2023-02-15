@@ -47,36 +47,17 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white">
-                                <tr>
-                                    <td>MAI</td>
-                                    <td>Ketua Gosip</td>
-                                    <td>0111111111</td>
-                                    <td>ketua@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>MAI</td>
-                                    <td>Ketua Gosip</td>
-                                    <td>0111111111</td>
-                                    <td>ketua@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>MAI</td>
-                                    <td>Ketua Gosip</td>
-                                    <td>0111111111</td>
-                                    <td>ketua@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>MAI</td>
-                                    <td>Ketua Gosip</td>
-                                    <td>0111111111</td>
-                                    <td>ketua@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>MAI</td>
-                                    <td>Ketua Gosip</td>
-                                    <td>0111111111</td>
-                                    <td>ketua@gmail.com</td>
-                                </tr>
+
+                            @foreach ($direktoris as $orang)
+                            <tr>
+                                <td>{{$orang->nama}}</td>
+                                <td>{{$orang->jawatan}}</td>
+                                <td>{{$orang->telefon}}</td>
+                                <td>{{$orang->email}}</td>
+                            </tr>
+                        @endforeach                            
+                        
+        
                         </tbody>
                     </table>
                 </div>
