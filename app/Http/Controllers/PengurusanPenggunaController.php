@@ -12,6 +12,10 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Models\KandunganDirektori;
+use App\Models\KandunganFaq;
+use App\Models\KandunganLain;
+use App\Models\KandunganProgram;
 
 class PengurusanPenggunaController extends Controller
 {
