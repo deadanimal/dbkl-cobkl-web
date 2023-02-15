@@ -94,7 +94,7 @@
                                                     <label>Bangsa</label>
                                                     <div class="input-group mb-3">
                                                         <select class="form-select flex-grow-1" name="bangsa">
-                                                            <option selected disabled>{{ $pengguna->bangsa }}h</option>
+                                                            <option selected disabled>{{ $pengguna->bangsa }}</option>
                                                             <option value="Melayu">Melayu</option>
                                                             <option value="Cina">Cina</option>
                                                             <option value="India">India</option>
@@ -123,10 +123,10 @@
                                                     <input class="form-control form-control-lg" type="text" name="jawatan" value="{{ $pengguna->jawatan }}" />
                                                 </div>
 
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label>Katalaluan</label>
                                                     <input class="form-control form-control-lg" type="password" name="password" value="{{ $pengguna->password }}" />
-                                                </div>
+                                                </div> --}}
 
                                                 {{-- <div class="mb-3">
                                                     <label>Sahkan Katalaluan</label>
