@@ -155,9 +155,9 @@
                         </ul>
                     </li>
 					@endif
-
-
+				
                     <li class="sidebar-item">
+						@if (Auth::user()->pengguna == 'admin' || Auth::user()->pengguna == 'staff')
 						<li class="sidebar-item">
 							<a data-bs-target="#kandungans" data-bs-toggle="collapse" class="sidebar-link">
 								{{-- <i class="align-middle me-2 fas fa-fw fa-home"></i>  --}}
@@ -172,6 +172,7 @@
 
 							</ul>
 						</li>
+						@endif
 
 						<li class="sidebar-item">
 						<form method="POST" action="{{ route('logout') }}">
