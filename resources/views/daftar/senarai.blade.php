@@ -16,10 +16,11 @@
                             <thead>
                                 <tr>
                                     <th style="width:5%">Bil</th>
-                                    <th style="width:25%">Pengguna</th>
-                                    <th style="width:10%">Nama</th>
+                                    <th style="width:15%">Jenis Pengguna</th>
+                                    <th style="width:25%">Nama</th>
+                                    <th style="width:15%">Jawatan</th>
                                     <th style="width:10%">Jantina</th>
-                                    <th style="width:45%">Bangsa</th>
+                                    <th style="width:10%">Bangsa</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -30,6 +31,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $pengguna->pengguna }}</td>
                                         <td>{{ $pengguna->nama }}</td>
+                                        <td>{{ $pengguna->jawatan }}</td>
                                         <td>{{ $pengguna->jantina }}</td>
                                         <td>{{ $pengguna->bangsa }}</td>
                                         <td class="table-action">
