@@ -85,7 +85,7 @@ class PengurusanPenggunaController extends Controller
         $pengguna->jantina = $request->jantina;
         $pengguna->bangsa = $request->bangsa;
         $pengguna->telefon = $request->telefon;
-        $pengguna->emel = $request->emel;
+        $pengguna->email = $request->email;
         $pengguna->alamat = $request->alamat;
         $pengguna->jawatan = $request->jawatan;
 
