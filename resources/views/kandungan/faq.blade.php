@@ -115,6 +115,9 @@
                                         <label>Jawapan</label>
                                         <input class="form-control form-control-lg" type="text" name="jawapan" value="{{$faq->jawapan}}" />
                                     </div>
+
+                                    <i>Tarikh: {{$faq->updated_at}}</i>
+                                    
                                     <button type="submit" class="btn btn-primary">Kemaskini</button>
                                     </form>
                                 </div>

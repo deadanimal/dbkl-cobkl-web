@@ -21,6 +21,7 @@ class KandunganController extends Controller
         $direktori->jawatan = $request->jawatan;
         $direktori->email = $request->email;
         $direktori->telefon = $request->telefon;
+        $direktori->image = $request->file('image')->store('cobkl/image');
         $direktori->save();
         return back();
     }     
@@ -32,6 +33,9 @@ class KandunganController extends Controller
         $direktori->jawatan = $request->jawatan;
         $direktori->email = $request->email;
         $direktori->telefon = $request->telefon;
+        if($request->image) {
+            $direktori->image = $request->file('image')->store('cobkl/image');
+        }
         $direktori->save();
         return back();
     }       
@@ -62,6 +66,46 @@ class KandunganController extends Controller
         $faq->kategori = $request->kategori;
         $faq->jawapan = $request->jawapan;
         $faq->save();
+        return back();
+    }   
+    
+    public function senarai_program() {
+        $programs = KandunganProgram::all();
+        return view('kandungan.program', compact('programs'));
+    }    
+
+    public function cipta_program(Request $request) {
+        $program = New KandunganProgram;
+        $program->title = $request->title;
+        $program->save();
+        return back();
+    }     
+    
+    public function kemaskini_program(Request $request) {
+        $id = (int)$request->route('id');
+        $program =KandunganProgram::find($id);
+        $program->title = $request->title;
+        $program->save();
+        return back();
+    }       
+    
+    public function senarai_lain() {
+        $lains = KandunganLain::all();
+        return view('kandungan.lain', compact('lains'));
+    }    
+
+    public function cipta_lain(Request $request) {
+        $lain = New KandunganLain;
+        $lain->title = $request->title;
+        $lain->save();
+        return back();
+    }     
+    
+    public function kemaskini_lain(Request $request) {
+        $id = (int)$request->route('id');
+        $lain =KandunganLain::find($id);
+        $lain->title = $request->title;
+        $lain->save();
         return back();
     }          
 }

@@ -3,7 +3,7 @@
 use App\Http\Controllers\PengurusanPenggunaController;
 use App\Http\Controllers\SistemController;
 use App\Http\Controllers\KandunganController;
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -29,6 +29,12 @@ Route::get('/direktori', function () {
 
 Route::get('/soalan-lazim', function () {
     $faqs = KandunganFaq::all();
+    return view('laman_utama.soalan_lazim', compact('faqs'));
+});
+
+Route::post('/soalan-lazim/carian', function (Request $request) {
+    $carian = $request->carian;
+    $faqs = KandunganFaq::where('jawapan','LIKE',"%{$carian}%")->get();
     return view('laman_utama.soalan_lazim', compact('faqs'));
 });
 
@@ -71,17 +77,17 @@ Route::get('laporan', [SistemController::class, 'senarai_laporan']);
 Route::get('/kandungan/faq', [KandunganController::class, 'senarai_faq']);
 Route::post('/kandungan/faq/carian', [KandunganController::class, 'carian_faq']);
 Route::get('/kandungan/direktoris', [KandunganController::class, 'senarai_direktoris']);
-Route::get('/kandungan/laporan', [KandunganController::class, 'senarai_laporan']);
+Route::get('/kandungan/program', [KandunganController::class, 'senarai_program']);
 Route::get('/kandungan/lain', [KandunganController::class, 'senarai_lain']);
 
 Route::post('/kandungan/faq', [KandunganController::class, 'cipta_faq']);
 Route::post('/kandungan/direktoris', [KandunganController::class, 'cipta_direktoris']);
-Route::post('/kandungan/laporan', [KandunganController::class, 'cipta_laporan']);
+Route::post('/kandungan/program', [KandunganController::class, 'cipta_program']);
 Route::post('/kandungan/lain', [KandunganController::class, 'cipta_lain']);
 
 Route::put('/kandungan/faq/{id}', [KandunganController::class, 'kemaskini_faq']);
-Route::put('/kandungan/direktoris/{id}', [KandunganController::class, 'kemaskini_direktoris']);
-Route::put('/kandungan/laporan/{id}', [KandunganController::class, 'kemaskini_laporan']);
+Route::put('/kandungan/direktori/{id}', [KandunganController::class, 'kemaskini_direktoris']);
+Route::put('/kandungan/program/{id}', [KandunganController::class, 'kemaskini_program']);
 Route::put('/kandungan/lain/{id}', [KandunganController::class, 'kemaskini_lain']);
 
 require __DIR__.'/modul/pengguna.php';

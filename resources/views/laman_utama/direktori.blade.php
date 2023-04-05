@@ -44,6 +44,7 @@
                                 <th class="sort">JAWATAN</th>
                                 <th class="sort">NO.TELEFON</th>
                                 <th class="sort">E-MEL</th>
+                                <th class="sort">GAMBAR</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white">
@@ -54,6 +55,13 @@
                                 <td>{{$orang->jawatan}}</td>
                                 <td>{{$orang->telefon}}</td>
                                 <td>{{$orang->email}}</td>
+                                <td>
+                                    @if($orang->image)
+                                        <a href="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{ $orang->image }}">Link</a>
+                                    @else
+                                        -
+                                    @endif
+                                </td>                                
                             </tr>
                         @endforeach                            
                         
