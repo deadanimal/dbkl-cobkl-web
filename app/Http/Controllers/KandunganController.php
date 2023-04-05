@@ -41,9 +41,15 @@ class KandunganController extends Controller
         return view('kandungan.faq', compact('faqs'));
     }    
 
+    public function carian_faq(Request $request) {
+        $faqs = KandunganFaq::where('jawapan','LIKE',"%{$request->carian}%")->get();
+        return view('kandungan.faq', compact('faqs'));
+    }      
+
     public function cipta_faq(Request $request) {
         $faq = New KandunganFaq;
         $faq->soalan = $request->soalan;
+        $faq->kategori = $request->kategori;
         $faq->jawapan = $request->jawapan;
         $faq->save();
         return back();
@@ -53,6 +59,7 @@ class KandunganController extends Controller
         $id = (int)$request->route('id');
         $faq =KandunganFaq::find($id);
         $faq->soalan = $request->soalan;
+        $faq->kategori = $request->kategori;
         $faq->jawapan = $request->jawapan;
         $faq->save();
         return back();

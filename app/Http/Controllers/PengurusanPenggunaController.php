@@ -19,32 +19,70 @@ use App\Models\KandunganProgram;
 
 class PengurusanPenggunaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function borangAdmin()
     {
-        //
         return view('daftar.borang');
     }
 
     public function senarai()
     {
-        //
+        $penggunas = User::where([
+            ['id', '>', 1]
+        ])->orderBy('pengguna')->get();
 
-        $penggunas = User::all();
-      
+        $countMelayu = User::where('bangsa', 'Melayu')->count();
 
-        return view('daftar.senarai', compact('penggunas'));
+        return view('pengguna.senarai', compact([
+            'penggunas', 
+            'countMelayu'
+    ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function profil(Request $request)
+    {
+        $pengguna = $request->user();
+        return view('pengguna.profile',compact('pengguna'));
+    }    
+
+    public function kemaskini(Request $request)
+    {
+        $id = (int)$request->route('id');
+        $pengguna = User::find($id);    
+
+        $pengguna->update([
+            'nombor_pengenalan' => $request->get('nombor_pengenalan'),
+            'nama' => $request->get('nama'),
+            'telefon' => $request->get('telefon'),
+            'alamat' => $request->get('alamat'),
+            'jawatan' => $request->get('jawatan'),
+
+        ]);   
+
+        if ($request->jantina) {
+            $pengguna->jantina = $request->jantina;
+        }
+
+        if ($request->bangsa) {
+            $pengguna->bangsa = $request->bangsa;
+        }      
+        
+        if ($request->aktif) {
+            $pengguna->active = $request->aktif;
+        }           
+        
+        $pengguna->save();
+
+        Alert::success('Pengguna dikemaskini', 'Maklumat telah disimpan.');
+        return back();
+    }    
+
+    public function daftar()
+    {
+        //
+        return view('pengguna.daftar');
+    }    
+
     public function ciptaPengguna(Request $request)
     {
 

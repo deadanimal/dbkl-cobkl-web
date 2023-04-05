@@ -48,11 +48,11 @@ Route::get('/pendaftaran', function () {
     return view('daftar.pendaftaran');
 })->middleware(['auth'])->name('pendaftaran');
 
-Route::get('senarai', [PengurusanPenggunaController::class, 'senarai']);
-Route::get('pengguna', [PengurusanPenggunaController::class, 'borangAdmin']);
-Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
-Route::get('pengguna/{id}', [PengurusanPenggunaController::class, 'satuPengguna']);
-Route::put('kemaskiniPengguna/{id}', [PengurusanPenggunaController::class, 'kemaskiniPengguna']);
+// Route::get('senarai', [PengurusanPenggunaController::class, 'senarai']);
+// Route::get('pengguna', [PengurusanPenggunaController::class, 'borangAdmin']);
+// Route::post('pengguna', [PengurusanPenggunaController::class, 'ciptaPengguna']);
+// Route::get('pengguna/{id}', [PengurusanPenggunaController::class, 'satuPengguna']);
+// Route::put('kemaskiniPengguna/{id}', [PengurusanPenggunaController::class, 'kemaskiniPengguna']);
 
 
 Route::get('penggunaAwam', [PengurusanPenggunaController::class, 'borangAwam']);
@@ -68,22 +68,25 @@ Route::get('audit', [SistemController::class, 'senarai_audit']);
 Route::get('notifikasi', [SistemController::class, 'senarai_notifikasi']);
 Route::get('laporan', [SistemController::class, 'senarai_laporan']);
 
-Route::get('faq', [KandunganController::class, 'senarai_faq']);
-Route::get('direktoris', [KandunganController::class, 'senarai_direktoris']);
-Route::get('laporan', [KandunganController::class, 'senarai_laporan']);
-Route::get('lain', [KandunganController::class, 'senarai_lain']);
+Route::get('/kandungan/faq', [KandunganController::class, 'senarai_faq']);
+Route::post('/kandungan/faq/carian', [KandunganController::class, 'carian_faq']);
+Route::get('/kandungan/direktoris', [KandunganController::class, 'senarai_direktoris']);
+Route::get('/kandungan/laporan', [KandunganController::class, 'senarai_laporan']);
+Route::get('/kandungan/lain', [KandunganController::class, 'senarai_lain']);
 
-Route::post('faq', [KandunganController::class, 'cipta_faq']);
-Route::post('direktoris', [KandunganController::class, 'cipta_direktoris']);
-Route::post('laporan', [KandunganController::class, 'cipta_laporan']);
-Route::post('lain', [KandunganController::class, 'cipta_lain']);
+Route::post('/kandungan/faq', [KandunganController::class, 'cipta_faq']);
+Route::post('/kandungan/direktoris', [KandunganController::class, 'cipta_direktoris']);
+Route::post('/kandungan/laporan', [KandunganController::class, 'cipta_laporan']);
+Route::post('/kandungan/lain', [KandunganController::class, 'cipta_lain']);
 
-Route::put('faq/{id}', [KandunganController::class, 'kemaskini_faq']);
-Route::put('direktoris/{id}', [KandunganController::class, 'kemaskini_direktoris']);
-Route::put('laporan/{id}', [KandunganController::class, 'kemaskini_laporan']);
-Route::put('lain/{id}', [KandunganController::class, 'kemaskini_lain']);
+Route::put('/kandungan/faq/{id}', [KandunganController::class, 'kemaskini_faq']);
+Route::put('/kandungan/direktoris/{id}', [KandunganController::class, 'kemaskini_direktoris']);
+Route::put('/kandungan/laporan/{id}', [KandunganController::class, 'kemaskini_laporan']);
+Route::put('/kandungan/lain/{id}', [KandunganController::class, 'kemaskini_lain']);
 
+require __DIR__.'/modul/pengguna.php';
 
 require __DIR__.'/modul/aduan.php';
+
 
 require __DIR__.'/auth.php';

@@ -7,7 +7,7 @@
             <div class="col-12 col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Senarai Pendaftaran Pengguna</h5>
+                        <h5 class="card-title">Senarai Pengguna</h5>
                     </div>
 
 

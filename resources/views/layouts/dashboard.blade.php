@@ -122,11 +122,11 @@
 								{{-- <i class="align-middle me-2 fas fa-fw fa-home"></i>  --}}
 								<span class="align-middle">Pengurusan Sistem</span>
 							</a>
-							<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show">
-									<li class="sidebar-item active"><a class="sidebar-link" href="/dashboard">Dashboard</a></li>
-									<li class="sidebar-item active"><a class="sidebar-link" href="/laporan">Laporan</a></li>										
-									<li class="sidebar-item active"><a class="sidebar-link" href="/notifikasi">Notifikasi</a></li>	
-									<li class="sidebar-item active"><a class="sidebar-link" href="/audit">Audit</a></li>										
+							<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+									<li class="sidebar-item"><a class="sidebar-link" href="/dashboard">Dashboard</a></li>
+									<li class="sidebar-item"><a class="sidebar-link" href="/laporan">Laporan</a></li>										
+									<li class="sidebar-item"><a class="sidebar-link" href="/notifikasi">Notifikasi</a></li>	
+									<li class="sidebar-item"><a class="sidebar-link" href="/audit">Audit</a></li>										
 							</ul>
 						</li>
 
@@ -142,11 +142,11 @@
                             {{-- <i class="align-middle me-2 fas fa-fw fa-home"></i>  --}}
                             <span class="align-middle">Pengurusan Pengguna</span>
                         </a>
-                        <ul id="penggunas" class="sidebar-dropdown list-unstyled collapse show"
+                        <ul id="penggunas" class="sidebar-dropdown list-unstyled collapse"
                             data-bs-parent="#sidebar">
                             
-                                <li class="sidebar-item active"><a class="sidebar-link" href="/pengguna/daftar">Pendaftaran Pengguna</a></li>
-                                <li class="sidebar-item active"><a class="sidebar-link" href="/pengguna/senarai">Senarai Pengguna</a></li>										
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengguna/daftar">Pendaftaran Pengguna</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengguna/senarai">Senarai Pengguna</a></li>										
                             
                             {{-- <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html">Analytics</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a></li> --}}
@@ -161,23 +161,23 @@
 								{{-- <i class="align-middle me-2 fas fa-fw fa-home"></i>  --}}
 								<span class="align-middle">Pengurusan Kandungan</span>
 							</a>
-							<ul id="kandungans" class="sidebar-dropdown list-unstyled collapse show">
-									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/faq">Soalan Lazim</a></li>
-									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/program">Program</a></li>										
-									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/direktoris">Direktori</a></li>	
-									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/lain">Lain-Lain</a></li>										
+							<ul id="kandungans" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+									<li class="sidebar-item"><a class="sidebar-link" href="/kandungan/faq">Soalan Lazim</a></li>
+									<li class="sidebar-item"><a class="sidebar-link" href="/kandungan/program">Program</a></li>										
+									<li class="sidebar-item"><a class="sidebar-link" href="/kandungan/direktoris">Direktori</a></li>	
+									<li class="sidebar-item"><a class="sidebar-link" href="/kandungan/lain">Lain-Lain</a></li>										
 
 
 							</ul>
 						</li>
 						@endif
 
-						<li class="sidebar-item">
+						{{-- <li class="sidebar-item">
 						<form method="POST" action="{{ route('logout') }}">
 							@csrf
-							<li class="sidebar-item active"><button class="sidebar-link" type="submit">Log Out</button></li>										
+							<li class="sidebar-item"><button class="sidebar-link" type="submit">Log Out</button></li>										
 						</form>		
-						</li>
+						</li> --}}
 
             
                     </li>		
@@ -202,10 +202,10 @@
                     
 					@if (Auth::user()->pengguna == 'admin')
                     <li class="sidebar-item">
-                        <a data-bs-target="#aduans" data-bs-toggle="collapse" class="sidebar-link">
+                        <a data-bs-target="#pengurusancobs" data-bs-toggle="collapse" class="sidebar-link">
                             <span class="align-middle">Pengurusan COBKL</span>
                         </a>
-                        <ul id="aduans" class="sidebar-dropdown list-unstyled collapse show"
+                        <ul id="pengurusancobs" class="sidebar-dropdown list-unstyled collapse"
                             data-bs-parent="#sidebar">
                             
                                 <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/umum">Aduan Umum</a></li>
