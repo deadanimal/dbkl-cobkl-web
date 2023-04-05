@@ -99,6 +99,8 @@
     <div class="p-0">
         <img src="/img/banner.png" alt="DBKL" class="w-100">
     </div>
+    @include('sweetalert::alert')
+
     <div class="main wrapper">
         <main class="content pb-5">
             <div class="splash active">

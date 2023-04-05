@@ -16,7 +16,8 @@
                             <thead>
                                 <tr>
                                     <th style="width:10%">Tarikh</th>
-                                    <th style="width:90%">Perkara</th>
+                                    <th style="width:10%">Modul</th>
+                                    <th style="width:80%">Perkara</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -24,10 +25,8 @@
 
                                 <tr>
                                     <td>1 Januari 2023</td>
+                                    <td>-</td>
                                     <td>User X masuk login dalam sistem</td>
-
-
-
                                 </tr>
          
 

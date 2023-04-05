@@ -5,6 +5,7 @@ use App\Http\Controllers\SistemController;
 use App\Http\Controllers\KandunganController;
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 use App\Models\KandunganDirektori;
@@ -13,6 +14,7 @@ use App\Models\KandunganLain;
 use App\Models\KandunganProgram;
 
 Route::get('/', function () {
+    Alert::info('COBKL', 'Selamat Datang ke Pesuruhjaya Bangunan Kuala Lumpur');
     return view('laman_utama.landing');
 });
 
@@ -82,5 +84,6 @@ Route::put('laporan/{id}', [KandunganController::class, 'kemaskini_laporan']);
 Route::put('lain/{id}', [KandunganController::class, 'kemaskini_lain']);
 
 
+require __DIR__.'/modul/aduan.php';
 
 require __DIR__.'/auth.php';

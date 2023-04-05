@@ -102,6 +102,8 @@
     <div class="p-0">
         <img src="/img/banner.png" alt="DBKL" class="w-100">
     </div>
+    @include('sweetalert::alert')
+
     <div class="wrapper">
         <nav id="sidebar" class="sidebar">
 
@@ -125,8 +127,6 @@
 									<li class="sidebar-item active"><a class="sidebar-link" href="/laporan">Laporan</a></li>										
 									<li class="sidebar-item active"><a class="sidebar-link" href="/notifikasi">Notifikasi</a></li>	
 									<li class="sidebar-item active"><a class="sidebar-link" href="/audit">Audit</a></li>										
-
-
 							</ul>
 						</li>
 
@@ -145,10 +145,8 @@
                         <ul id="penggunas" class="sidebar-dropdown list-unstyled collapse show"
                             data-bs-parent="#sidebar">
                             
-                                <li class="sidebar-item active"><a class="sidebar-link" href="/pengguna">Pendaftaran
-                                        Pengguna</a></li>
-                                <li class="sidebar-item active"><a class="sidebar-link" href="/senarai">Senarai
-                                        Pengguna</a></li>										
+                                <li class="sidebar-item active"><a class="sidebar-link" href="/pengguna/daftar">Pendaftaran Pengguna</a></li>
+                                <li class="sidebar-item active"><a class="sidebar-link" href="/pengguna/senarai">Senarai Pengguna</a></li>										
                             
                             {{-- <li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html">Analytics</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a></li> --}}
@@ -164,10 +162,10 @@
 								<span class="align-middle">Pengurusan Kandungan</span>
 							</a>
 							<ul id="kandungans" class="sidebar-dropdown list-unstyled collapse show">
-									<li class="sidebar-item active"><a class="sidebar-link" href="/faq">Soalan Lazim</a></li>
-									<li class="sidebar-item active"><a class="sidebar-link" href="/program">Program</a></li>										
-									<li class="sidebar-item active"><a class="sidebar-link" href="/direktoris">Direktori</a></li>	
-									<li class="sidebar-item active"><a class="sidebar-link" href="/lain">Lain-Lain</a></li>										
+									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/faq">Soalan Lazim</a></li>
+									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/program">Program</a></li>										
+									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/direktoris">Direktori</a></li>	
+									<li class="sidebar-item active"><a class="sidebar-link" href="/kandungan/lain">Lain-Lain</a></li>										
 
 
 							</ul>
@@ -183,6 +181,42 @@
 
             
                     </li>		
+
+					@if (Auth::user()->pengguna == 'staff')
+                    <li class="sidebar-item">
+                        <a data-bs-target="#aduans" data-bs-toggle="collapse" class="sidebar-link">
+                            <span class="align-middle">Pengurusan Aduan</span>
+                        </a>
+                        <ul id="aduans" class="sidebar-dropdown list-unstyled collapse show"
+                            data-bs-parent="#sidebar">
+                            
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/umum">Aduan Umum</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/bersemuka">Perjumpaan Bersemuka</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/jabatan">Mesyuarat Jabatan</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/borang29">Borang 29</a></li>	
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/sita">Sita Tanpa Waran</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/aduan/ejen">Ejen Membuat Laporan</a></li>								
+                        </ul>
+                    </li>
+					@endif    
+                    
+					@if (Auth::user()->pengguna == 'admin')
+                    <li class="sidebar-item">
+                        <a data-bs-target="#aduans" data-bs-toggle="collapse" class="sidebar-link">
+                            <span class="align-middle">Pengurusan COBKL</span>
+                        </a>
+                        <ul id="aduans" class="sidebar-dropdown list-unstyled collapse show"
+                            data-bs-parent="#sidebar">
+                            
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/umum">Aduan Umum</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/bersemuka">Perjumpaan Bersemuka</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/jabatan">Mesyuarat Jabatan</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/borang29">Borang 29</a></li>	
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/sita">Sita Tanpa Waran</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/ejen">Ejen Membuat Laporan</a></li>								
+                        </ul>
+                    </li>
+					@endif                       
 					
 			
 

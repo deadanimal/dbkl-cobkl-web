@@ -6,13 +6,13 @@
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -59,39 +59,39 @@
                     <div class="carousel-item active" data-bs-interval="3000">
                         <div class="row">
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
-                            </div>
-                            <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
-                            </div>
-                            <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <div class="row">
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                             <div class="col-4">
-                                <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                                <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
                             </div>
                         </div>
                     </div>
@@ -122,47 +122,47 @@
                                 <h2 class="text-center">Part 1</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius debitis maxime consequuntur ab, sit corporis veniam molestias molestiae fugiat aliquid accusamus ipsa, iusto itaque, eligendi quos voluptatum. Voluptatem, provident delectus.</p>
                             </div>
-                            {{-- <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                            {{-- <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
                         <div class="col-4">
                             <div class="card">
                                 <h2 class="text-center">Part 2</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed tenetur ratione, delectus vitae doloribus soluta similique eum consectetur quisquam perspiciatis corporis dolor, nostrum illum voluptatem, voluptate odio ipsa repellendus!</p>
                             </div>
-                            {{-- <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                            {{-- <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
                         <div class="col-4">
                             <div class="card">
                                 <h2 class="text-center">Part 3</h2>
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, ipsum. Recusandae illo unde explicabo dolorum sint praesentium deserunt sapiente, inventore, ea quos dolor veniam nemo eos temporibus est facilis eveniet.</p>
                             </div>
-                            {{-- <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="..."> --}}
+                            {{-- <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="..."> --}}
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="row">
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <div class="row">
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-1.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-2.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2019/12/04/18/53/kuala-lumpur-4673407_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                         <div class="col-4">
-                            <img src="/assets/img/photos/unsplash-3.jpg" class="d-block w-100 vh-50" alt="...">
+                            <img src="https://cdn.pixabay.com/photo/2020/06/18/16/24/skyline-5314163_1280.jpg" class="d-block w-100 vh-50" alt="...">
                         </div>
                     </div>
                 </div>
