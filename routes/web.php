@@ -93,6 +93,7 @@ Route::put('/kandungan/lain/{id}', [KandunganController::class, 'kemaskini_lain'
 require __DIR__.'/modul/pengguna.php';
 
 require __DIR__.'/modul/aduan.php';
+require __DIR__.'/modul/mediasi.php';
 
 
 require __DIR__.'/auth.php';

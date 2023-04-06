@@ -182,7 +182,7 @@
             
                     </li>		
 
-					@if (Auth::user()->pengguna == 'staff')
+					@if (Auth::user()->pengguna == 'admin' || Auth::user()->pengguna == 'staff')
                     <li class="sidebar-item">
                         <a data-bs-target="#aduans" data-bs-toggle="collapse" class="sidebar-link">
                             <span class="align-middle">Pengurusan Aduan</span>
@@ -200,20 +200,16 @@
                     </li>
 					@endif    
                     
-					@if (Auth::user()->pengguna == 'admin')
+					@if (Auth::user()->pengguna == 'admin' || Auth::user()->pengguna == 'staff')
                     <li class="sidebar-item">
-                        <a data-bs-target="#pengurusancobs" data-bs-toggle="collapse" class="sidebar-link">
-                            <span class="align-middle">Pengurusan COBKL</span>
+                        <a data-bs-target="#mediasis" data-bs-toggle="collapse" class="sidebar-link">
+                            <span class="align-middle">Pengurusan Mediasi</span>
                         </a>
-                        <ul id="pengurusancobs" class="sidebar-dropdown list-unstyled collapse"
+                        <ul id="mediasis" class="sidebar-dropdown list-unstyled collapse"
                             data-bs-parent="#sidebar">
                             
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/umum">Aduan Umum</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/bersemuka">Perjumpaan Bersemuka</a></li>								
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/jabatan">Mesyuarat Jabatan</a></li>								
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/borang29">Borang 29</a></li>	
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/sita">Sita Tanpa Waran</a></li>								
-                                <li class="sidebar-item"><a class="sidebar-link" href="/pengurusan/ejen">Ejen Membuat Laporan</a></li>								
+                                <li class="sidebar-item"><a class="sidebar-link" href="/mediasi/panggilan">Panggilan Mediasi</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="/mediasi/borang">Pengurusan Borang</a></li>																
                         </ul>
                     </li>
 					@endif                       
